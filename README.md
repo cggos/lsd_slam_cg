@@ -21,14 +21,12 @@ sudo ln -s /usr/lib/x86_64-linux-gnu/libQGLViewer-qt4.so \
            /usr/lib/x86_64-linux-gnu/libQGLViewer.so  
 
 mkdir -p ws_lsd_slam/src & cd ws_lsd_slam/src
-git clone https://github.com/kevin-george/lsd_slam.git
+git clone https://github.com/cggos/lsd_slam_cg.git
 cd ..
 catkin_make -j2
 ```
 
 # Run
-
-First, install LSD-SLAM following 2.1 or 2.2, depending on your Ubuntu / ROS version. You don't need openFabMap for now.
 
 * run with  [Room Example Sequence](http://vmcremers8.informatik.tu-muenchen.de/lsd/LSD_room.bag.zip)
 
@@ -37,6 +35,10 @@ First, install LSD-SLAM following 2.1 or 2.2, depending on your Ubuntu / ROS ver
 	rosrun lsd_slam_core live_slam image:=/image_raw camera_info:=/camera_info
 	rosbag play ~/LSD_room.bag
 	```
+
+  <div align=center>
+    <img src="lsd_slam_viewer.jpg">
+  </div>
 
 # Loop-Closure
 
